@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users2, Briefcase, LineChart, HeartHandshake } from "lucide-react";
+import { Users2, Briefcase, HeartHandshake } from "lucide-react";
 
 export const Services = () => {
   const services = [
@@ -14,11 +14,6 @@ export const Services = () => {
       description: "Developing comprehensive strategies to achieve organizational goals and growth."
     },
     {
-      icon: <LineChart className="w-12 h-12" />,
-      title: "Performance Optimization",
-      description: "Enhancing operational efficiency and team productivity through proven methodologies."
-    },
-    {
       icon: <HeartHandshake className="w-12 h-12" />,
       title: "Community Building",
       description: "Creating strong, sustainable communities through strategic partnerships and engagement."
@@ -26,22 +21,22 @@ export const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-primary mb-4">Our Services</h2>
+          <h2 className="text-4xl font-bold text-primary mb-4">Services I Can Provide</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions tailored to drive organizational success and community impact
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

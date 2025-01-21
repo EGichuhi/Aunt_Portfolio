@@ -29,7 +29,7 @@ export const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <span className={`text-2xl font-bold ${isScrolled ? "text-primary" : "text-white"}`}>
-            Portfolio
+            Jacqueline Kariuki
           </span>
           
           {/* Mobile menu button */}
