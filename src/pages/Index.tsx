@@ -3,13 +3,18 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { CompanySection } from "@/components/CompanySection";
 import { Contact } from "@/components/Contact";
+import { Stats } from "@/components/Stats";
+import { Testimonials } from "@/components/Testimonials";
+import { Services } from "@/components/Services";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <Stats />
       <About />
+      <Services />
       <div id="work" className="bg-gray-50">
         <CompanySection
           name="Biashara Africa Business Club"
@@ -35,6 +40,7 @@ const Index = () => {
           isReversed
         />
       </div>
+      <Testimonials />
       <Contact />
     </div>
   );
