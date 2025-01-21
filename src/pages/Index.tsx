@@ -10,7 +10,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <div id="companies">
+      <div id="work">
         <CompanySection
           name="First Company"
           role="Senior Consultant"
