@@ -25,7 +25,7 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-600 mb-12"
             >
-              Building relationships and driving success through experienced leadership
+              Uniting people and ideas to drive success through effective leadership and teamwork.
             </motion.p>
             <motion.button
               initial={{ opacity: 0 }}

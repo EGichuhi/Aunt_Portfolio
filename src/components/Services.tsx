@@ -11,7 +11,7 @@ export const Services = () => {
     {
       icon: <Briefcase className="w-12 h-12" />,
       title: "Strategic Planning",
-      description: "Developing comprehensive strategies to achieve organizational goals and growth."
+      description: "Developing comprehensive strategies to achieve personal goals and growth."
     },
     {
       icon: <HeartHandshake className="w-12 h-12" />,
@@ -32,7 +32,7 @@ export const Services = () => {
         >
           <h2 className="text-4xl font-bold text-primary mb-4">Services I Can Provide</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions tailored to drive organizational success and community impact
+            Comprehensive solutions tailored to drive personalized success and community impact
           </p>
         </motion.div>
 

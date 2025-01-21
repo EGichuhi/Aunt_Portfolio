@@ -21,7 +21,7 @@ const Index = () => {
           role="Co-Founder"
           description="Discover African Businesses Near You"
           achievements={[
-            '<a href="https://biasharaafricabusinessclub.org/" target="_blank">Biashara Africa Business Club</a>',
+            'Visit the <a href="https://biasharaafricabusinessclub.org/" target="_blank" rel="noopener noreferrer">Biashara Africa Business Club</a> website for more information.',
             "We connect African entrepreneurs with exciting opportunities to grow their businesses.",
             "Join Toronto's vibrant African community designed to help your business thrive."
           ]}
@@ -32,7 +32,7 @@ const Index = () => {
           role="Executive Advisor"
           description="Providing executive-level guidance and implementing organizational change."
           achievements={[
-            '<a href="https://www.hannahcommunity.org/" target="_blank">Hannah Community Development Project</a>',
+            'Learn more about the <a href="https://www.hannahcommunity.org/" target="_blank" rel="noopener noreferrer">Hannah Community Development Project</a>.',
             "The Hannah Community Development Project is a faith-based organization in Eldoret's Kamukunji informal settlement, dedicated to empowering youth, women, and the elderly through initiatives like skill development, preventive health, and substance abuse management.",
             "The mission is to improve living standards by linking community members to income-generating opportunities and providing holistic support."
           ]}

@@ -43,7 +43,7 @@ export const Navigation = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex gap-8">
-            {["about", "companies", "contact"].map((item) => (
+            {["about", "Organizations", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item)}
@@ -60,7 +60,7 @@ export const Navigation = () => {
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4">
-            {["about", "companies", "contact"].map((item) => (
+            {["about", "Organizations", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item)}
