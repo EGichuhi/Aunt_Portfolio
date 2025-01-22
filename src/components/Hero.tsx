@@ -16,7 +16,7 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#8E9196]">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#403E43]">
               Decades of Excellence
             </h1>
             <motion.p 
@@ -27,15 +27,17 @@ export const Hero = () => {
             >
               Uniting people and ideas to drive success through effective leadership and teamwork.
             </motion.p>
-            <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              onClick={scrollToWork}
-              className="text-gray-600 hover:text-gray-800 transition-colors duration-300 animate-bounce"
-            >
-              <ArrowDown size={48} />
-            </motion.button>
+            <div className="w-full flex justify-center">
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                onClick={scrollToWork}
+                className="text-gray-600 hover:text-gray-800 transition-colors duration-300 animate-bounce"
+              >
+                <ArrowDown size={48} />
+              </motion.button>
+            </div>
           </motion.div>
           
           <motion.div

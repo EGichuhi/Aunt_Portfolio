@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { ReactNode } from 'react';
 
 interface CompanySectionProps {
   name: string;
   description: string;
   role: string;
-  achievements: string[];
+  achievements: ReactNode[];
   imageSrc: string;
   isReversed?: boolean;
 }
@@ -18,7 +19,7 @@ export const CompanySection = ({
   isReversed = false,
 }: CompanySectionProps) => {
   return (
-    <section className="py-24 px-4">
+    <section className="py-12 px-4"> {/* Reduced padding */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,13 +27,13 @@ export const CompanySection = ({
         viewport={{ once: true }}
         className="max-w-4xl mx-auto"
       >
-        <div className={`grid md:grid-cols-2 gap-16 items-center ${isReversed ? 'md:grid-flow-dense' : ''}`}>
+        <div className={`grid md:grid-cols-2 gap-8 items-center ${isReversed ? 'md:grid-flow-dense' : ''}`}>
           <motion.div 
             initial={{ opacity: 0, x: isReversed ? 20 : -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-primary">{name}</h3>
             <p className="text-xl text-accent font-medium">{role}</p>
