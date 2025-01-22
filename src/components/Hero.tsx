@@ -7,7 +7,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-r from-[#E5DEFF] via-[#D3E4FD] to-[#FDE1D3] relative py-20">
+    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#F6F6F7] to-[#FFFFFF] relative py-20">
       <div className="max-w-6xl mx-auto px-4 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
