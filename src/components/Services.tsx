@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Users2, Briefcase, HeartHandshake } from "lucide-react";
+import { Users2, Briefcase, HeartHandshake, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Services = () => {
   const services = [
@@ -21,7 +22,7 @@ export const Services = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="services" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,6 +52,17 @@ export const Services = () => {
               <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button
+            variant="outline"
+            className="inline-flex items-center gap-2"
+            onClick={() => window.location.href = 'mailto:contact@example.com'}
+          >
+            <Mail className="w-5 h-5" />
+            Contact for Services
+          </Button>
         </div>
       </div>
     </section>

@@ -32,7 +32,6 @@ export const Navigation = () => {
             Jacqueline Kariuki
           </span>
           
-          {/* Mobile menu button */}
           <Button
             variant="ghost"
             className="md:hidden"
@@ -41,12 +40,11 @@ export const Navigation = () => {
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
 
-          {/* Desktop menu */}
           <div className="hidden md:flex gap-8">
-            {["about", "Organizations", "contact"].map((item) => (
+            {["about", "services", "Organizations", "contact"].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollTo(item)}
+                onClick={() => scrollTo(item.toLowerCase())}
                 className={`text-lg font-medium capitalize ${
                   isScrolled ? "text-gray-700 hover:text-primary" : "text-white hover:text-gray-200"
                 }`}
@@ -57,13 +55,12 @@ export const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4">
-            {["about", "Organizations", "contact"].map((item) => (
+            {["about", "services", "Organizations", "contact"].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollTo(item)}
+                onClick={() => scrollTo(item.toLowerCase())}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 capitalize"
               >
                 {item}

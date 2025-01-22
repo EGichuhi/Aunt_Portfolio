@@ -6,17 +6,18 @@ import { Contact } from "@/components/Contact";
 import { Stats } from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
 import { Services } from "@/components/Services";
+import { MapPin, MessageSquare, Mail } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <div className="space-y-8"> {/* Reduced spacing between sections */}
+      <div className="space-y-0"> {/* Removed spacing between sections */}
         <Stats />
         <About />
         <Services />
-        <div id="work" className="bg-gray-50">
+        <div id="work">
           <CompanySection
             name="Biashara Africa Business Club"
             role="Co-Founder"
@@ -43,6 +44,22 @@ const Index = () => {
         </div>
         <Testimonials />
         <Contact />
+        <footer className="bg-white py-8 border-t">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4">
+            <div className="flex items-center gap-2 text-gray-600">
+              <MapPin className="w-5 h-5" />
+              <span>Toronto, Canada</span>
+            </div>
+            <div className="flex gap-6">
+              <a href="https://wa.me/1234567890" className="text-gray-600 hover:text-primary">
+                <MessageSquare className="w-6 h-6" />
+              </a>
+              <a href="mailto:contact@example.com" className="text-gray-600 hover:text-primary">
+                <Mail className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
