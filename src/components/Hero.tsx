@@ -1,8 +1,30 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export const Hero = () => {
+  const [messageOfDay, setMessageOfDay] = useState("");
+
+  // This simulates getting a different message each day
+  const messages = [
+    "Empowering communities through collaborative leadership",
+    "Building bridges across continents",
+    "Creating sustainable partnerships for growth",
+    "Inspiring change through effective leadership",
+    "Connecting hearts and minds across borders",
+    "Fostering innovation in African business",
+    "Transforming ideas into impactful realities"
+  ];
+
+  useEffect(() => {
+    // Get today's date and use it to select a message
+    const today = new Date();
+    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+    const messageIndex = dayOfYear % messages.length;
+    setMessageOfDay(messages[messageIndex]);
+  }, []);
+
   const scrollToWork = () => {
     document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -24,10 +46,21 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-12"
+              className="text-xl md:text-2xl text-gray-600 mb-6"
             >
               Uniting people and ideas to drive success through effective leadership and teamwork.
             </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-12 shadow-lg"
+            >
+              <h2 className="text-sm uppercase tracking-wider text-gray-600 mb-2">Message of the Day</h2>
+              <p className="text-lg text-gray-800 italic">{messageOfDay}</p>
+            </motion.div>
+
             <div className="w-full flex justify-center">
               <motion.button
                 initial={{ opacity: 0 }}
