@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -20,7 +19,10 @@ export const Hero = () => {
   useEffect(() => {
     // Get today's date and use it to select a message
     const today = new Date();
-    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = (today.getTime() - start.getTime());
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
     const messageIndex = dayOfYear % messages.length;
     setMessageOfDay(messages[messageIndex]);
   }, []);
@@ -30,7 +32,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#E6E6FA] to-[#6A5ACD] relative py-20">
+    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#E5DEFF] to-[#9b87f5] relative py-20">
       <div className="max-w-6xl mx-auto px-4 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
