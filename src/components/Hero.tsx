@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
@@ -7,7 +8,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#FFE5D9] to-[#FF6F61] relative py-20">
+    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#E6E6FA] to-[#6A5ACD] relative py-20">
       <div className="max-w-6xl mx-auto px-4 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
