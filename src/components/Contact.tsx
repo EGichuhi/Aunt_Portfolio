@@ -55,7 +55,7 @@ export const Contact = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                className="bg-white/30 border-white/40 text-white placeholder:text-white/80"
                 required
               />
             </div>
@@ -67,7 +67,7 @@ export const Contact = () => {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                className="bg-white/30 border-white/40 text-white placeholder:text-white/80"
                 required
               />
             </div>
@@ -78,7 +78,7 @@ export const Contact = () => {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full min-h-[150px] rounded-md border bg-white/10 border-white/20 p-3 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/20"
+                className="w-full min-h-[150px] rounded-md border bg-white/30 border-white/40 p-3 text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/40"
                 required
               />
             </div>
