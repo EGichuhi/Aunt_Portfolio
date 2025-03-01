@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { Users2, Briefcase, HeartHandshake, Mail } from "lucide-react";
+import { Users2, Briefcase, HeartHandshake, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Services = () => {
@@ -18,6 +19,11 @@ export const Services = () => {
       icon: <HeartHandshake className="w-12 h-12" />,
       title: "Community Building",
       description: "Creating strong, sustainable communities through strategic partnerships and engagement."
+    },
+    {
+      icon: <Globe className="w-12 h-12" />,
+      title: "Kenyan Immigration Support",
+      description: "Providing guidance, resources, and personalized assistance to Kenyans navigating the Canadian immigration process. Help with documentation, application procedures, and settlement services for a smoother transition to life in Canada."
     }
   ];
 
@@ -37,7 +43,7 @@ export const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}

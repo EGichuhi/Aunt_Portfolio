@@ -56,6 +56,18 @@ const Index = () => {
               imageSrc="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e"
             />
             <CompanySection
+              name="WOW Blessings Toronto"
+              role="Member"
+              description="Supporting community initiatives and charitable efforts in Toronto"
+              achievements={[
+                <a href="https://www.wowblessingstoronto.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit WOW Blessings Toronto</a>,
+                "Participating in community outreach programs to support those in need.",
+                "Contributing to initiatives that strengthen Toronto's diverse communities."
+              ]}
+              imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+              isReversed
+            />
+            <CompanySection
               name="Hannah Community"
               role="Executive Advisor"
               description="Providing executive-level guidance and implementing organizational change."
