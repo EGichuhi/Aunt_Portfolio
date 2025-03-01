@@ -33,6 +33,29 @@ const Index = () => {
               imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
             />
             <CompanySection
+              name="KCOntario"
+              role="Consultant"
+              description="Supporting Kenyan-Canadian initiatives in Ontario"
+              achievements={[
+                <a href="https://www.kcontario.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit KCOntario</a>,
+                "Connecting Kenyan-Canadians through cultural exchange and business development.",
+                "Promoting economic and social partnerships between Kenya and Ontario."
+              ]}
+              imageSrc="https://images.unsplash.com/photo-1569616786036-96e7d3cb4408"
+              isReversed
+            />
+            <CompanySection
+              name="Accessibility for All"
+              role="Advisor"
+              description="Creating inclusive environments for people of all abilities"
+              achievements={[
+                <a href="https://accessibilityforall.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit Accessibility for All</a>,
+                "Advocating for accessible spaces and services in communities.",
+                "Providing resources and education on inclusive design and practices."
+              ]}
+              imageSrc="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e"
+            />
+            <CompanySection
               name="Hannah Community"
               role="Executive Advisor"
               description="Providing executive-level guidance and implementing organizational change."
