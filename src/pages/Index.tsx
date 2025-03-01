@@ -15,7 +15,7 @@ const Index = () => {
       <Navigation />
       <NewHero />
       <div className="space-y-0"> {/* Removed spacing between sections */}
-        <Stats />
+        {/* Stats section removed */}
         <About />
         <Services />
         <div id="organizations" className="py-8 bg-slate-50">
