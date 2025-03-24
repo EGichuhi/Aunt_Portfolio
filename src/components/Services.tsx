@@ -1,50 +1,43 @@
-
 import { motion } from "framer-motion";
-import { Users2, Briefcase, HeartHandshake, Mail, Globe } from "lucide-react";
+import { Users2, Briefcase, HeartHandshake, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Services = () => {
   const services = [
     {
-      icon: <Users2 className="w-10 h-10 text-indigo-500" />,
+      icon: <Users2 className="w-12 h-12" />,
       title: "Leadership Development",
-      description: "Cultivating strong leaders through personalized coaching."
+      description: "Cultivating strong leaders through personalized coaching and mentorship programs."
     },
     {
-      icon: <Briefcase className="w-10 h-10 text-blue-500" />,
+      icon: <Briefcase className="w-12 h-12" />,
       title: "Strategic Planning",
-      description: "Developing strategies to achieve personal goals and growth."
+      description: "Developing comprehensive strategies to achieve personal goals and growth."
     },
     {
-      icon: <HeartHandshake className="w-10 h-10 text-green-500" />,
+      icon: <HeartHandshake className="w-12 h-12" />,
       title: "Community Building",
-      description: "Creating sustainable communities through strategic partnerships."
-    },
-    {
-      icon: <Globe className="w-10 h-10 text-purple-500" />,
-      title: "Kenyan Immigration",
-      description: "Guidance and assistance for Kenyans navigating Canadian immigration."
+      description: "Creating strong, sustainable communities through strategic partnerships and engagement."
     }
   ];
 
   return (
-    <section id="services" className="py-12 bg-gradient-to-b from-white to-slate-50">
+    <section id="services" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-primary mb-3">Services I Provide</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tailored solutions driving personal success and community impact
+          <h2 className="text-4xl font-bold text-primary mb-4">Services I Can Provide</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive solutions tailored to drive personalized success and community impact
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -52,28 +45,22 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="h-full"
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
-              <Card className="h-full border-t-4 hover:shadow-lg transition-all duration-300 border-t-primary/80">
-                <CardHeader className="pb-2">
-                  <div className="mb-3">{service.icon}</div>
-                  <CardTitle className="text-lg font-bold text-primary">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </CardContent>
-              </Card>
+              <div className="text-primary mb-6">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-4 text-primary">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center gap-2 hover:bg-primary hover:text-white transition-colors"
+            className="inline-flex items-center gap-2"
             onClick={() => window.location.href = 'mailto:contact@example.com'}
           >
-            <Mail className="w-4 h-4" />
+            <Mail className="w-5 h-5" />
             Contact for Services
           </Button>
         </div>

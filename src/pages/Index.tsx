@@ -1,6 +1,5 @@
-
 import { Navigation } from "@/components/Navigation";
-import { NewHero } from "@/components/NewHero";
+import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { CompanySection } from "@/components/CompanySection";
 import { Contact } from "@/components/Contact";
@@ -13,73 +12,35 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <NewHero />
+      <Hero />
       <div className="space-y-0"> {/* Removed spacing between sections */}
-        {/* Stats section removed */}
+        <Stats />
         <About />
         <Services />
-        <div id="organizations" className="py-8 bg-slate-50">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl font-bold text-primary text-center mb-12">Organizations</h2>
-            <CompanySection
-              name="Biashara Africa Business Club"
-              role="Co-Founder"
-              description="Discover African Businesses Near You"
-              achievements={[
-                <a href="https://biasharaafricabusinessclub.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit Biashara Africa Business Club</a>,
-                "We connect African entrepreneurs with exciting opportunities to grow their businesses.",
-                "Join Toronto's vibrant African community designed to help your business thrive."
-              ]}
-              imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-            />
-            <CompanySection
-              name="KCOntario"
-              role="Consultant"
-              description="Supporting Kenyan-Canadian initiatives in Ontario"
-              achievements={[
-                <a href="https://www.kcontario.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit KCOntario</a>,
-                "Connecting Kenyan-Canadians through cultural exchange and business development.",
-                "Promoting economic and social partnerships between Kenya and Ontario."
-              ]}
-              imageSrc="https://images.unsplash.com/photo-1569616786036-96e7d3cb4408"
-              isReversed
-            />
-            <CompanySection
-              name="Accessibility for All"
-              role="Advisor"
-              description="Creating inclusive environments for people of all abilities"
-              achievements={[
-                <a href="https://accessibilityforall.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit Accessibility for All</a>,
-                "Advocating for accessible spaces and services in communities.",
-                "Providing resources and education on inclusive design and practices."
-              ]}
-              imageSrc="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e"
-            />
-            <CompanySection
-              name="WOW Blessings Toronto"
-              role="Member"
-              description="Supporting community initiatives and charitable efforts in Toronto"
-              achievements={[
-                <a href="https://www.wowblessingstoronto.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit WOW Blessings Toronto</a>,
-                "Participating in community outreach programs to support those in need.",
-                "Contributing to initiatives that strengthen Toronto's diverse communities."
-              ]}
-              imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
-              isReversed
-            />
-            <CompanySection
-              name="Hannah Community"
-              role="Executive Advisor"
-              description="Providing executive-level guidance and implementing organizational change."
-              achievements={[
-                <a href="https://www.hannahcommunity.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Learn more about Hannah Community Development Project</a>,
-                "The Hannah Community Development Project is a faith-based organization in Eldoret's Kamukunji informal settlement, dedicated to empowering youth, women, and the elderly through initiatives like skill development, preventive health, and substance abuse management.",
-                "The mission is to improve living standards by linking community members to income-generating opportunities and providing holistic support."
-              ]}
-              imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
-              isReversed
-            />
-          </div>
+        <div id="work">
+          <CompanySection
+            name="Biashara Africa Business Club"
+            role="Co-Founder"
+            description="Discover African Businesses Near You"
+            achievements={[
+              <a href="https://biasharaafricabusinessclub.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Visit Biashara Africa Business Club</a>,
+              "We connect African entrepreneurs with exciting opportunities to grow their businesses.",
+              "Join Toronto's vibrant African community designed to help your business thrive."
+            ]}
+            imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+          />
+          <CompanySection
+            name="Hannah Community"
+            role="Executive Advisor"
+            description="Providing executive-level guidance and implementing organizational change."
+            achievements={[
+              <a href="https://www.hannahcommunity.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Learn more about Hannah Community Development Project</a>,
+              "The Hannah Community Development Project is a faith-based organization in Eldoret's Kamukunji informal settlement, dedicated to empowering youth, women, and the elderly through initiatives like skill development, preventive health, and substance abuse management.",
+              "The mission is to improve living standards by linking community members to income-generating opportunities and providing holistic support."
+            ]}
+            imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+            isReversed
+          />
         </div>
         <Testimonials />
         <Contact />

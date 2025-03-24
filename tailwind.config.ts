@@ -26,15 +26,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#334155", // slate-700
+          DEFAULT: "#60A5FA",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#f8fafc", // slate-50
-          foreground: "#334155", // slate-700
+          DEFAULT: "#d7d2cc",
+          foreground: "#60A5FA",
         },
         accent: {
-          DEFAULT: "#64748b", // slate-500
+          DEFAULT: "#93C5FD",
           foreground: "#ffffff",
         },
       },
