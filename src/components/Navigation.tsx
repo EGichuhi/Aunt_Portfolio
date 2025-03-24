@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -41,7 +42,7 @@ export const Navigation = () => {
           </Button>
 
           <div className="hidden md:flex gap-8">
-            {["about", "services", "Organizations", "contact"].map((item) => (
+            {["about", "services", "organizations", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
@@ -57,7 +58,7 @@ export const Navigation = () => {
 
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4">
-            {["about", "services", "Organizations", "contact"].map((item) => (
+            {["about", "services", "organizations", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
