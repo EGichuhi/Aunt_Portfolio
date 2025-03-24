@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -5,7 +6,6 @@ import { useState, useEffect } from "react";
 export const Hero = () => {
   const [messageOfDay, setMessageOfDay] = useState("");
 
-  // This simulates getting a different message each day
   const messages = [
     "Empowering communities through collaborative leadership",
     "Building bridges across continents",
@@ -17,7 +17,6 @@ export const Hero = () => {
   ];
 
   useEffect(() => {
-    // Get today's date and use it to select a message
     const today = new Date();
     const start = new Date(today.getFullYear(), 0, 0);
     const diff = (today.getTime() - start.getTime());
@@ -32,7 +31,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-b from-[#EFF6FF] to-[#60A5FA] relative py-20">
+    <section className="min-h-screen flex items-center bg-gradient-to-b from-slate-100 to-slate-300 relative py-20">
       <div className="max-w-6xl mx-auto px-4 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -41,14 +40,14 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#403E43]">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-slate-800">
               Decades of Excellence
             </h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-6"
+              className="text-xl md:text-2xl text-slate-600 mb-6"
             >
               Uniting people and ideas to drive success through effective leadership and teamwork.
             </motion.p>
@@ -59,8 +58,8 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white/80 backdrop-blur-sm rounded-lg p-4 mb-12 shadow-lg"
             >
-              <h2 className="text-sm uppercase tracking-wider text-gray-600 mb-2">Message of the Day</h2>
-              <p className="text-lg text-gray-800 italic">{messageOfDay}</p>
+              <h2 className="text-sm uppercase tracking-wider text-slate-600 mb-2">Message of the Day</h2>
+              <p className="text-lg text-slate-800 italic">{messageOfDay}</p>
             </motion.div>
 
             <div className="w-full flex justify-center">
@@ -69,7 +68,7 @@ export const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 onClick={scrollToWork}
-                className="text-gray-600 hover:text-gray-800 transition-colors duration-300 animate-bounce"
+                className="text-slate-600 hover:text-slate-800 transition-colors duration-300 animate-bounce"
               >
                 <ArrowDown size={48} />
               </motion.button>
