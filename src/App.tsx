@@ -1,11 +1,11 @@
 
+import React, { Component, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import { Suspense } from "react";
 
 // Always use HashRouter for GitHub Pages
 const queryClient = new QueryClient();
@@ -13,22 +13,30 @@ const queryClient = new QueryClient();
 // Simple fallback for suspense
 const Fallback = () => <div className="p-4 text-center">Loading...</div>;
 
-// Simple error boundary component
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+// Properly typed error boundary component
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.error("React Error Boundary caught an error:", error, errorInfo);
   }
 
-  render() {
+  render(): React.ReactNode {
     if (this.state.hasError) {
       return <div className="p-4 text-center text-red-500">Something went wrong. Please refresh the page.</div>;
     }
