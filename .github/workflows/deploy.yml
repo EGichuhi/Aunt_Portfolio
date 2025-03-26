@@ -27,6 +27,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Ensure proper path handling for assets
+          PUBLIC_URL: ./
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
